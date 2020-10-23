@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Cep</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="flex-box">
+        <div class="content-box">
+            <div class="row">
+                <form class="col s12">
+
+                    <h6>
+                        Digite o CEP e ao sair os campos de endereço serão completados. Pode utilizar a telca TAB após digitar o CEP.
+                    </h6>
+
+                    <div class="row">
+                        <div class="input-field col s12 m4">
+                            <input placeholder="CEP" id="cep" nam="cep" type="text" class="validate">
+                            <p class="error">CEP inválido</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Rua" disabled id="logradouro" nam="logradouro" type="text" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <input placeholder="Bairro" disabled id="bairro" nam="bairro" type="text" class="validate">
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <input placeholder="Cidade" disabled id="localidade" nam="localidade" type="text"
+                                class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m3">
+                            <input placeholder="Estado" disabled id="uf" nam="uf" type="text" class="validate">
+                        </div>
+                        <div class="input-field col s12 m9">
+                            <input placeholder="IBGE" disabled id="ibge" nam="ibge" type="text" class="validate">
+                        </div>
+                    </div>
+
+                    <button class="btn waves-effect waves-light" style="background-color: green;width: 100%;margin-bottom: 10px;"
+                        type="button" 
+                        id="limpar"
+                        name="limpar">
+                        Limpar
+                    </button>
+
+                    <button 
+                        class="btn waves-effect waves-light" 
+                        style="background-color: blue;width: 100%;" 
+                        type="button" name="action"
+                    >
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
